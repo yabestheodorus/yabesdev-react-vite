@@ -8,6 +8,7 @@
   --font-fredoka : "Fredoka", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-geistmono: "Geist Mono", sans-serif;
 }
  @plugin "daisyui/theme" {
    name: "light";
@@ -22,8 +23,8 @@
 .bg-ceramic-grid-dashed {
   background-color: #F1F5F9;
     background-image:
-      linear-gradient(to right, #80808012 1px, transparent 1px),
-      linear-gradient(to bottom, #80808012 1px, transparent 1px);
+      linear-gradient(to right, #5B4B8A18 1px, transparent 1px),
+      linear-gradient(to bottom, #5B4B8A18 1px, transparent 1px);
     background-size: 30px 30px;
 }
 
@@ -39,8 +40,8 @@
 .bg-ceramic-grid-inversed {
   background-color: #F1F5F9;
   background-image:
-    linear-gradient(to right, #80808012 1px, transparent 1px),
-    linear-gradient(to top, #80808012 1px, transparent 1px);
+    linear-gradient(to right, #5B4B8A18 1px, transparent 1px),
+    linear-gradient(to top, #5B4B8A18 1px, transparent 1px);
   background-size: 30px 30px;
 }
 
@@ -51,4 +52,22 @@
   inset: 0;
   background: linear-gradient(to top, rgba(241, 245, 249, 0) 0%, #ffffff 99%);
   pointer-events: none;
+}
+
+
+.bg-diagonal-lines {
+  background-color: #F8FAFC;
+  background-image:
+    linear-gradient(45deg,
+      transparent 48%,
+      #80808018 49%,
+      #80808018 51%,
+      transparent 52%);
+  background-size: 20px 20px;
+}
+
+.bg-ceramic-dots {
+  background-color: #F9F9F9;
+  background-image: radial-gradient(#80808018 1px, transparent 1px);
+  background-size: 10px 10px;
 }

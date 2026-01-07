@@ -2,7 +2,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
-    <footer className="py-12 text-sm text-gray-500 z-20 max-w-7xl mx-auto">
+    <footer className="py-4 text-sm text-gray-500 z-10 max-w-7xl mx-auto">
       <div className="mx-auto  grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* About Me */}
         <div>
@@ -96,7 +96,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-slate-200 mt-10 pt-7 pb-6 text-sm text-gray-500 z-20">
+      <div className="border-t border-slate-300 mt-10 pt-7.5 pb-6 text-sm text-gray-500 z-20">
         <div className="mx-auto  flex items-center justify-between">
           <span className="font-medium text-slate-800">
             © {new Date().getFullYear()} Yabes Theodorus

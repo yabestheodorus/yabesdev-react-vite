@@ -2,15 +2,15 @@
 import MainLayout from "./layouts/MainLayout";
 
 // Pages
-import Home from "./pages/Home";
-import SmartContracts from "./pages/SmartContracts";
-import Dapps from "./pages/Dapps";
 import EngineeringApproach from "./pages/EngineeringApproach";
-import TechStack from "./pages/TechStack";
-import CV from "./pages/CV";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Experience from "./pages/Experience";
+import Services from "./pages/Services";
+import Portofolio from "./pages/portofolio/Portofolio";
+import EtherbeastDetail from "./pages/portofolio/etherbeast/EtherbeastDetail";
 
 function App() {
   return (
@@ -18,14 +18,15 @@ function App() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/smart-contracts" element={<SmartContracts />} />
-          <Route path="/dapps" element={<Dapps />} />
+
+          <Route path="/portofolio" element={<Portofolio />} />
+          <Route path="/etherbeast" element={<EtherbeastDetail />} />
           <Route
             path="/engineering-approach"
             element={<EngineeringApproach />}
           />
-          <Route path="/tech-stack" element={<TechStack />} />
-          <Route path="/cv" element={<CV />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Route>

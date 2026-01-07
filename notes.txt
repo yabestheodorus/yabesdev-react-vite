@@ -1,0 +1,45 @@
+Home
+I’m Yabes Theodorus — a blockchain and smart contract developer 
+who builds secure, gas-efficient, and audit-ready Web3 systems. 
+This is my introduction. For deeper insights, explore the pages below.
+
+Smart Contracts  
+
+    Write production-grade Solidity with strict adherence to the CEI (Checks-Effects-Interactions) pattern  
+    Optimize gas through tight struct packing, custom error design, and efficient storage layouts  
+    Include complete NatSpec documentation for every contract, function, and error  
+    Deliver with comprehensive test suites: unit, fuzz, and stateful invariant tests using Foundry
+
+dApps  
+
+    Develop full-stack decentralized applications using React, Wagmi, and WalletConnect  
+    Prioritize smooth user onboarding, responsive UIs (with Tailwind CSS), and real-time blockchain interaction  
+    Integrate Chainlink oracles, on-chain analytics, and gas estimation for enhanced UX  
+    Ship with interaction scripts and deployment workflows for seamless testing and iteration
+
+Engineering Approach  
+
+    Start every contract with threat modeling and gas budgeting  
+    Enforce consistent Solidity structure: errors → events → constructor → external → internal  
+    Test early and often: fuzzing and invariants catch bugs before mainnet  
+    Favor clarity and auditability over cleverness—code should be easy to read, review, and extend
+
+Tech Stack  
+
+    Smart Contracts: Solidity, Foundry, OpenZeppelin, Chainlink  
+    Testing: Forge (unit, fuzz, invariant), Cast, Chisel  
+    Frontend: React, TypeScript, Wagmi, Viem, Tailwind CSS  
+    Tooling: Hardhat (legacy), Ethers.js, WalletConnect, Framer Motion
+
+CV
+View my complete professional journey—including key projects, technical competencies, 
+education, and work experience—in a printable, well-structured format.
+
+About
+I’m a detail-oriented Web3 engineer with a passion for writing correct, comprehensible, 
+and optimized code. When I’m not auditing storage layouts or tweaking fuzz test parameters, 
+I’m contributing to open-source tools or sharing insights on secure Solidity patterns.
+
+Contact
+Have a project that demands gas efficiency, reentrancy safety, and clean architecture? 
+Let’s connect. I’m open to smart contract development, audits, and full-stack Web3 collaborations.
