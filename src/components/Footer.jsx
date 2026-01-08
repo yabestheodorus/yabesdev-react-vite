@@ -1,11 +1,12 @@
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { RxDownload } from "react-icons/rx";
 
 function Footer() {
   return (
-    <footer className="py-4 text-sm text-gray-500 z-10 max-w-7xl mx-auto">
-      <div className="mx-auto  grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="py-4 text-sm text-gray-500 z-10 max-w-6xl overflow-hidden mx-auto">
+      <div className="mx-auto flex items-start gap-8">
         {/* About Me */}
-        <div>
+        <div className="grow">
           <h3 className="text-[17px] font-medium text-slate-500 mb-2">
             About Me
           </h3>
@@ -17,7 +18,7 @@ function Footer() {
         </div>
 
         {/* Sitemap */}
-        <div>
+        <div className="w-1/4">
           <h3 className="text-[17px] font-medium text-slate-500 mb-2">Work</h3>
           <ul className="space-y-1.5 text-[17px] font-medium text-slate-800">
             <li>
@@ -30,30 +31,17 @@ function Footer() {
                 href="#smart-contracts"
                 className="hover:text-primaryPurple transition"
               >
-                Smart Contracts
+                Portofolio
               </a>
             </li>
             <li>
               <a href="#dapps" className="hover:text-primaryPurple transition">
-                DApps
+                Services
               </a>
             </li>
             <li>
               <a
                 href="#tech-stack"
-                className="hover:text-primaryPurple transition"
-              >
-                Tech Stack
-              </a>
-            </li>
-            <li>
-              <a href="#cv" className="hover:text-primaryPurple transition">
-                CV
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
                 className="hover:text-primaryPurple transition"
               >
                 Contact
@@ -62,14 +50,40 @@ function Footer() {
           </ul>
         </div>
 
+        <div className="w-1/4">
+          <h3 className="text-[17px] font-medium text-slate-500 mb-2">
+            This Site
+          </h3>
+          <ul className="space-y-1.5 text-[17px] font-medium text-slate-800">
+            <li>
+              <a
+                href="/resume.pdf"
+                download="Yabes-Theodorus-Resume.pdf"
+                className="hover:text-primaryPurple transition flex items-center gap-x-2"
+              >
+                My Resume
+                <RxDownload />
+              </a>
+            </li>
+            <li>
+              <a
+                href="/credits"
+                className="hover:text-primaryPurple transition"
+              >
+                Credits
+              </a>
+            </li>
+          </ul>
+        </div>
+
         {/* Social */}
-        <div>
+        <div className="w-1/4">
           <h3 className="text-[17px] font-medium text-slate-500 mb-2">
             Connect
           </h3>
           <div className="flex space-x-4 mb-4">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/yabestheodorus"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-primaryPurple transition"
@@ -77,7 +91,7 @@ function Footer() {
               <FaGithub size={20} />
             </a>
             <a
-              href="https://instagram.com/yourusername"
+              href="https://instagram.com/yabestheodorus"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-primaryPurple transition"
@@ -85,7 +99,7 @@ function Footer() {
               <FaInstagram size={20} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/yabestheodorus"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-primaryPurple transition"

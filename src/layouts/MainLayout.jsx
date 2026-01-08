@@ -9,6 +9,8 @@ function MainLayout() {
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-x-0 top-0 h-200 bg-ceramic-grid-dashed background-grid--fade-out" />
         <div className="absolute inset-x-0 bottom-0 h-120 bg-ceramic-grid-inversed background-grid--fade-out-inversed" />
+        <div className="absolute -top-32 -right-32 w-125 h-125 bg-primaryPurple/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute bottom-0 -left-40 w-125 h-125 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
       </div>
 
       {/* Navbar — outside scrollable area */}

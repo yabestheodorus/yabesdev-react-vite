@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaReact } from "react-icons/fa";
 import { HiMiniDocumentArrowDown } from "react-icons/hi2";
 import { RiJavascriptFill } from "react-icons/ri";
@@ -15,6 +15,7 @@ import { motion } from "framer-motion";
 import Quote from "./components/Quote";
 import Principles from "./components/Principles";
 import { animationProperties } from "../../../Constants";
+import { NavLink } from "react-router-dom";
 function Home(props) {
   return (
     <div className="flex flex-col justify-center ">
@@ -75,17 +76,23 @@ function Home(props) {
 
           <motion.div variants={animationProperties.item}>
             <div className="flex items-center w-fit gap-x-6 mb-28">
-              <button className="bg-primaryPurple px-4 py-2 text-white rounded-lg hover:cursor-pointer hover:scale-110 duration-200">
+              <NavLink
+                to={"/contact"}
+                className="bg-primaryPurple px-4 py-2 text-white rounded-lg hover:cursor-pointer hover:scale-110 duration-200"
+              >
                 Contact me
-              </button>
+              </NavLink>
 
-              <button className="text-slate-600 group flex items-center gap-x-1 px-4 py-2 font-medium hover:cursor-pointer">
-                <HiMiniDocumentArrowDown
-                  size={30}
-                  className="group-hover:animate-bounce"
-                />{" "}
+              <a
+                href="/resume.pdf"
+                download="Yabes-Theodorus-Resume.pdf"
+                className="text-slate-600 group flex items-center gap-x-1 px-4 py-2 font-medium hover:text-amber-600 transition"
+              >
+                <span className="inline-block group-hover:animate-bounce">
+                  <HiMiniDocumentArrowDown size={30} />
+                </span>
                 Resume
-              </button>
+              </a>
             </div>
           </motion.div>
 
@@ -166,7 +173,7 @@ function Home(props) {
           transition={{ type: "spring", stiffness: 600, damping: 20 }}
         >
           <img
-            className={`relative w-3/4 mx-auto md:w-full h-auto duration-1000 `}
+            className={`relative w-3/4 mx-auto md:w-full h-auto duration-1000 block`}
             src="/images/header.png"
           />
         </motion.div>

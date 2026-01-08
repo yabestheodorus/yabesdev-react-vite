@@ -1,313 +1,149 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { animationProperties } from "../../Constants";
-import { FaCube, FaCodeBranch, FaWallet } from "react-icons/fa";
+import {
+  FaCube,
+  FaCodeBranch,
+  FaWallet,
+  FaRocket,
+  FaCode,
+  FaMobileAlt,
+} from "react-icons/fa";
 import { FaGithub, FaLinkedin, FaInstagram, FaGlobe } from "react-icons/fa";
 function Experience() {
+  const experiences = [
+    {
+      title: "Web3 / Smart Contract Developer",
+      company: "Independent Projects",
+      period: "2024 – Present",
+      location: "Remote",
+      highlights: [
+        "Built secure, gas-optimized Solidity smart contracts (ERC-20, ERC-721, ERC-4337).",
+        "Integrated Chainlink VRF for provable randomness in gacha NFT minting (EtherBeast).",
+        "Followed CEI pattern and audit-ready practices with full NatSpec documentation.",
+        "Wrote comprehensive test suites with Foundry (fuzzing, invariants).",
+      ],
+      icon: <FaRocket className="text-amber-500" />,
+      color: "border-l-amber-500",
+    },
+    {
+      title: "Full-Stack Developer (MERN)",
+      company: "Project-based",
+      period: "2021 – 2024",
+      location: "Remote",
+      highlights: [
+        "Developed full-stack dApps and Web2 applications using React, Node.js, Express, and MongoDB.",
+        "Integrated Wagmi and WalletConnect for seamless wallet interactions.",
+        "Built responsive UIs with Tailwind CSS and Framer Motion.",
+      ],
+      icon: <FaCode className="text-purple-500" />,
+      color: "border-l-purple-500",
+    },
+    {
+      title: "Project Manager · iOS App Developer",
+      company: "Walletku",
+      period: "December 2017 – Present",
+      location: "Jakarta, Indonesia",
+      highlights: [
+        "Led long-term mobile product development as Project Manager.",
+        "Coordinated cross-functional teams across engineering, product, and business.",
+        "Developed and maintained native iOS applications for core financial services.",
+      ],
+      icon: <FaMobileAlt className="text-purple-500" />,
+      color: "border-l-purple-500",
+    },
+    {
+      title: "Android & iOS App Developer",
+      company: "Walden Global Services",
+      period: "November 2015 – May 2017",
+      location: "Bandung, Indonesia",
+      highlights: [
+        "Built production-ready native Android and iOS apps with Java, Swift, and REST APIs.",
+        "Collaborated with designers and backend engineers to deliver user-centric features.",
+        "Implemented application logic, UI components, and third-party integrations.",
+      ],
+      icon: <FaMobileAlt className="text-slate-500" />,
+      color: "border-l-slate-400",
+    },
+  ];
   return (
     <motion.section
       initial="hidden"
       animate="visible"
       variants={animationProperties.container}
-      className="flex flex-col items-start pb-36"
+      className="flex flex-col items-start pb-48"
     >
-      <motion.h1
-        variants={animationProperties.item}
-        className="font-bold text-6xl text-slate-800 mb-4"
-      >
-        Experience
-      </motion.h1>
-
-      <motion.p
-        variants={animationProperties.item}
-        className="text-2xl text-slate-600 max-w-3xl mb-16"
-      >
-        Project-driven engineering experience across smart contracts, Web3
-        systems, and full-stack web development.
-      </motion.p>
-
-      <section class="relative w-[210mm] h-[297mm] overflow-hidden mx-auto bg-slate-50 p-10 font-jakarta text-slate-900">
-        {/* <!-- PAPER ORNAMENTS --> */}
-        <div class="absolute -top-24 -right-24 w-96 h-96 bg-primaryPurple/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 -left-32 w-[420px] h-[420px] bg-amber-500/10 rounded-full blur-3xl"></div>
-        <div class="absolute inset-0 bg-ceramic-dots opacity-40 pointer-events-none"></div>
-
-        {/* <!-- CONTENT WRAPPER --> */}
-        <div class="relative z-10">
-          {/* <!-- HEADER --> */}
-          <header class="grid grid-cols-[150px_1fr] gap-8 mb-6">
-            {/* <!-- PHOTO --> */}
-            <div>
-              <div class="w-32 h-47 rounded-xl border-2 overflow-hidden p-0.5 border-primaryPurple/30 bg-slate-200 flex items-center justify-center text-slate-500 text-sm">
-                <img
-                  src="/images/profile.jpg"
-                  className="overflow-hidden rounded-xl h-auto object-contain"
-                />
-              </div>
-            </div>
-
-            {/* <!-- IDENTITY --> */}
-            <div>
-              <h1 class="text-3xl font-bold tracking-tight">Yabes Theodorus</h1>
-              <p class="mt-1 text-lg font-semibold text-primaryPurple">
-                Web3 / Smart Contract Developer · Full-Stack Developer
-              </p>
-
-              {/* <!-- HIGHLIGHTS --> */}
-              <div class="flex flex-wrap gap-2 mt-4 text-sm">
-                <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-700 font-medium">
-                  8+ Years Experience
-                </span>
-
-                <span class="px-3 py-1 rounded-full bg-primaryPurple/10 text-primaryPurple font-medium">
-                  Security-Focused
-                </span>
-
-                <span class="px-3 py-1 rounded-full bg-primaryPurple/10 text-primaryPurple font-medium">
-                  Audit-Ready
-                </span>
-              </div>
-
-              {/* <!-- CONTACT --> */}
-              <div class="mt-4 grid grid-cols-2 gap-y-1 text-sm text-slate-600">
-                <span>Email: me@yabestheo.dev</span>
-                <span>Phone: +62851-5528-7233</span>
-                <span>Location: Indonesia</span>
-                <span>Portfolio: yabestheo.dev</span>
-              </div>
-            </div>
-
-            {/* <!-- SOCIALS --> */}
-            <div className="flex items-center gap-2  text-sm">
-              {/* GitHub */}
-              <a
-                href="https://github.com/yabestheodorus"
-                className="flex items-center justify-center whitespace-nowrap px-4 gap-x-2 h-8 rounded-full bg-gray-800/10 border border-gray-800 text-gray-800 hover:bg-gray-800/20 transition"
-              >
-                <FaGithub className="w-4 h-4" /> /yabestheodorus
-              </a>
-
-              {/* LinkedIn */}
-              <a
-                href="https://linkedin.com/in/yabestheodorus"
-                className="flex items-center justify-center whitespace-nowrap px-4 gap-x-2 h-8 rounded-full bg-blue-600/20 border border-blue-600 text-blue-600 hover:bg-blue-600/30 transition"
-              >
-                <FaLinkedin className="w-4 h-4" /> /yabestheodorus
-              </a>
-
-              {/* Instagram */}
-              <a
-                href="https://instagram.com/yabestheodorus"
-                className="flex items-center justify-center px-4 gap-x-2 h-8 rounded-full bg-pink-500/20 border border-pink-500 text-pink-500 hover:bg-pink-500/30 transition"
-              >
-                <FaInstagram className="w-4 h-4" /> @yabestheo.dev
-              </a>
-
-              {/* Personal Website */}
-              <a
-                href="https://yabestheo.dev"
-                className="flex items-center justify-center px-4 gap-x-2 h-8 rounded-full bg-amber-500/20 border border-amber-500 text-amber-500 hover:bg-amber-500/30 transition"
-              >
-                <FaGlobe className="w-4 h-4" /> yabestheo.dev
-              </a>
-            </div>
-          </header>
-
-          {/* <!-- AMBER DIVIDER --> */}
-          <div class="h-0.5 w-full bg-amber-500/50 rounded-full mb-6"></div>
-
-          {/* <!-- BODY --> */}
-          <main class="grid grid-cols-[1.3fr_0.7fr] gap-4">
-            {/* <!-- LEFT --> */}
-            <div>
-              {/* <!-- EXPERIENCE --> */}
-              <section>
-                <h2 class="text-lg font-bold mb-4">Experience</h2>
-
-                <div class="mb-4">
-                  <h3 class="font-semibold">Web3 / Smart Contract Developer</h3>
-                  <p class="text-xs text-slate-500">
-                    Independent Projects · 2024–Present
-                  </p>
-                  <ul class="mt-2 space-y-1 text-sm text-slate-700">
-                    <li>
-                      • Solidity smart contracts (ERC-20, ERC-721, ERC-4337)
-                    </li>
-                    <li>• Chainlink VRF & oracle integrations</li>
-                    <li>• Audit-ready structure, NatSpec documentation</li>
-                  </ul>
-                </div>
-
-                <div class="mb-4">
-                  <h3 class="font-semibold">Full-Stack Developer (MERN)</h3>
-                  <p class="text-xs text-slate-500">Project-based</p>
-                  <ul class="mt-2 space-y-1 text-sm">
-                    <li>• React frontends & Node.js APIs</li>
-                    <li>• MongoDB data modeling</li>
-                  </ul>
-                </div>
-
-                <section class="relative mb-4">
-                  {/* <!-- WALLETKU --> */}
-                  <article class="mb-4">
-                    <h3 class="text-lg font-semibold text-slate-900">
-                      Walletku
-                    </h3>
-                    <p class="text-sm text-slate-600">
-                      Project Manager · iOS App Developer
-                    </p>
-                    <p class="text-xs text-slate-500 mb-3">
-                      December 2017 – Present · Jakarta, Indonesia
-                    </p>
-
-                    <ul class="list-disc pl-5 space-y-1 text-sm text-slate-700 leading-relaxed">
-                      <li>
-                        Led long-term mobile product development and delivery as
-                        Project Manager.
-                      </li>
-                      <li>
-                        Coordinated cross-functional teams across engineering,
-                        product, and business stakeholders.
-                      </li>
-                      <li>
-                        Developed and maintained iOS applications supporting
-                        Walletku’s core services.
-                      </li>
-                    </ul>
-                  </article>
-
-                  {/* <!-- WALDEN GLOBAL SERVICES --> */}
-                  <article class="mb-4">
-                    <h3 class="text-lg font-semibold text-slate-900">
-                      Walden Global Services
-                    </h3>
-                    <p class="text-sm text-slate-600">
-                      Android Developer · iOS App Developer
-                    </p>
-                    <p class="text-xs text-slate-500 mb-3">
-                      November 2015 – May 2017
-                    </p>
-
-                    <ul class="list-disc pl-5 space-y-2 text-sm text-slate-700 leading-relaxed">
-                      <li>
-                        Developed native Android and iOS mobile applications for
-                        production environments, implemented application logic,
-                        UI components, and API integrations.
-                      </li>
-                      <li>
-                        Collaborated closely with designers and backend
-                        engineers to deliver complete features.
-                      </li>
-                    </ul>
-                  </article>
-                </section>
-              </section>
-            </div>
-
-            {/* <!-- RIGHT --> */}
-            <aside>
-              {/* <!-- SUMMARY --> */}
-              <section class="mb-6">
-                <h2 class="text-lg font-bold mb-2">Professional Summary</h2>
-                <p class="text-sm leading-relaxed text-slate-700">
-                  Web3 and full-stack developer with strong focus on secure
-                  Ethereum smart contracts, production-grade Web3 systems, and
-                  long-term maintainability. Experienced across startups,
-                  enterprise, and independent projects.
-                </p>
-              </section>
-              <div class="h-0.5 bg-amber-500/50 rounded-full mb-4"></div>
-              {/* <!-- EDUCATION --> */}
-              <section className="mb-4">
-                <h2 class="text-lg font-bold mb-2">Education</h2>
-                <p class="text-sm font-semibold">
-                  Bachelor of Information Technology
-                </p>
-                <p class="text-xs text-slate-600">
-                  Institut Teknologi Harapan Bangsa Bandung
-                </p>
-                <p class="text-xs text-slate-600">2011–2015 · GPA 3.41</p>
-              </section>
-
-              <div class="h-0.5 bg-amber-500/50 rounded-full mb-6"></div>
-
-              {/* LEGEND */}
-              <div className="mb-3 text-[10px] text-slate-600">
-                <div>
-                  <span className="border-b-2 border-amber-500">
-                    Bold underline
-                  </span>
-                  &nbsp; Frequent
-                </div>
-                <div>
-                  <span className="border-b border-slate-400">
-                    Thin underline
-                  </span>
-                  &nbsp; Occasional
-                </div>
-              </div>
-
-              {/* SKILLS MATRIX */}
-              <section className="space-y-3">
-                <div>
-                  <h3 className="font-bold text-xs mb-1">Languages</h3>
-                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-                    <span className="border-b-2 border-amber-500">
-                      Solidity
-                    </span>
-                    <span className="border-b-2 border-amber-500">
-                      TypeScript
-                    </span>
-                    <span className="border-b-2 border-amber-500">
-                      JavaScript
-                    </span>
-                    <span className="border-b border-slate-400">HTML</span>
-                    <span className="border-b border-slate-400">
-                      CSS / SCSS
-                    </span>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-xs mb-1">
-                    Blockchain & Backend
-                  </h3>
-                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-                    <span className="border-b-2 border-amber-500">
-                      Ethereum
-                    </span>
-                    <span className="border-b-2 border-amber-500">Foundry</span>
-                    <span className="border-b-2 border-amber-500">Express</span>
-                    <span className="border-b border-slate-400">Redis</span>
-                    <span className="border-b border-slate-400">MongoDB</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-xs mb-1">Frontend</h3>
-                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-                    <span className="border-b-2 border-amber-500">React</span>
-                    <span className="border-b border-slate-400">Next.js</span>
-                    <span className="border-b border-slate-400">
-                      Framer Motion
-                    </span>
-                    <span className="border-b border-slate-400">Redux</span>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="font-bold text-xs mb-1">Tools & Software</h3>
-                  <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs">
-                    <span className="border-b-2 border-amber-500">VS Code</span>
-                    <span className="border-b-2 border-amber-500">Git</span>
-                    <span className="border-b border-slate-400">Figma</span>
-                  </div>
-                </div>
-              </section>
-            </aside>
-          </main>
+      <section className=" flex items-center w-full mx-auto ">
+        <div className="flex flex-col justify-center w-7/12">
+          <motion.h1
+            variants={animationProperties.item}
+            className="font-bold text-6xl text-slate-800 mb-2"
+          >
+            Experience
+          </motion.h1>
+          <motion.p
+            variants={animationProperties.item}
+            className="mt-4 text-2xl text-slate-600 max-w-2xl "
+          >
+            A journey through mobile, full-stack, and Web3 — always shipping
+            secure, user-focused software.
+          </motion.p>
+          <motion.div
+            variants={animationProperties.item}
+            className="w-24 h-0.5 bg-amber-500 mt-6 mb-16  rounded-full"
+          />
         </div>
+
+        <motion.div
+          className="w-full md:w-5/12 order-first md:order-last flex justify-center"
+          initial={{ opacity: 0, scale: 0.95, x: 100 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ type: "spring", stiffness: 600, damping: 20 }}
+        >
+          <img
+            className={`relative w-3/4 mx-auto md:w-full h-auto duration-1000 block`}
+            src="/images/header_exp.png"
+          />
+        </motion.div>
       </section>
+
+      <div className="relative z-10 px-6 ">
+        {/* Vertical Timeline */}
+        <div className="relative">
+          {/* Amber center line */}
+          <div className="absolute left-6 top-0 bottom-0 w-1 bg-amber-500/30 rounded-full"></div>
+
+          <div className="space-y-12">
+            {experiences.map((exp, idx) => (
+              <div key={idx} className="pl-24 relative">
+                {/* Timeline dot with icon */}
+                {/* <div className="absolute -left-24 top-1 w-12 h-12 flex items-center justify-center rounded-full bg-white border-2 border-amber-500 shadow-sm">
+                  {exp.icon}
+                </div> */}
+
+                {/* Content */}
+                <h3 className="text-2xl font-semibold text-slate-700">
+                  {exp.title}
+                </h3>
+                <p className="text-xl font-semibold text-primaryPurple mb-1">
+                  {exp.company}
+                </p>
+                <p className="text-lg text-slate-600 mb-3">
+                  {exp.period} • {exp.location}
+                </p>
+                <ul className="space-y-2 text-slate-700">
+                  {exp.highlights.map((item, i) => (
+                    <li key={i} className="flex items-center gap-x-4 text-lg">
+                      <span className="bg-slate-500 w-3 h-3 rounded-sm" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </motion.section>
   );
 }

@@ -23,6 +23,7 @@ function Navbar(props) {
     { name: "Services", path: "/services" },
     { name: "Experience", path: "/experience" },
     { name: "Contact", path: "/contact" },
+    { name: "Credits", path: "/credits" },
   ];
 
   return (

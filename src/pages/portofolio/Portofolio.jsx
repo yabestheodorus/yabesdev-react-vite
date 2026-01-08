@@ -27,22 +27,47 @@ function Portofolio(props) {
       variants={animationProperties.container}
       className="flex flex-col items-start "
     >
-      <motion.h1
-        variants={animationProperties.item}
-        className="font-bold text-6xl text-slate-800 mb-2"
-      >
-        Portofolios
-      </motion.h1>
-      <motion.p
-        variants={animationProperties.item}
-        className="mt-4 text-2xl text-slate-600 max-w-2xl mb-36"
-      >
-        Here are some projects I’ve built.
-      </motion.p>
+      <section className=" flex items-center w-full mx-auto mb-16 ">
+        <div className="flex flex-col justify-center w-7/12 ">
+          <motion.h1
+            variants={animationProperties.item}
+            className="font-bold text-6xl text-slate-800 mb-2"
+          >
+            Portofolios
+          </motion.h1>
+          <motion.p
+            variants={animationProperties.item}
+            className="mt-4 text-2xl text-slate-600 max-w-2xl"
+          >
+            Until this moment, I’ve built projects that blend smart contract
+            precision with intuitive user experiences — from secure,
+            gas-optimized dApps to full-stack Web2 solutions. Each one tells a
+            story of problem-solving, learning, and shipping code that matters.
+          </motion.p>
+
+          {/* Add amber divider for rhythm & visual closure */}
+          <motion.div
+            variants={animationProperties.item}
+            className="w-24 h-0.5 bg-amber-500 mt-6 "
+          />
+        </div>
+
+        <motion.div
+          className="w-full md:w-5/12 order-first md:order-last flex justify-center"
+          initial={{ opacity: 0, scale: 0.95, x: 100 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ type: "spring", stiffness: 600, damping: 20 }}
+        >
+          <img
+            className={`md:p-6 h-auto duration-1000 block`}
+            src="/images/header_porto.png"
+          />
+        </motion.div>
+      </section>
 
       <motion.div
         variants={animationProperties.fade}
-        className="flex items-start gap-x-4"
+        className="flex items-center gap-x-4"
       >
         <div className="flex flex-col w-7/12 items-start">
           <h6 className="text-amber-500 text-xl font-semibold">
@@ -109,7 +134,7 @@ function Portofolio(props) {
           </div>
         </div>
 
-        <div className="flex flex-col w-5/12 items-start ">
+        <div className="flex flex-col w-5/12 px-6 items-start ">
           <div className="mockup-browser border-base-300 border w-full bg-slate-200">
             <div className="mockup-browser-toolbar ">
               <div className="input ">https://etherbeast.yabestheo.dev</div>
