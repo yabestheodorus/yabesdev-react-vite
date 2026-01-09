@@ -33,7 +33,7 @@ function Principles(props) {
     return principles.map((principle, index) => (
       <div
         key={index}
-        className="flex lg:flex-row flex-col items-center gap-8 lg:gap-8"
+        className="flex lg:flex-row flex-col items-center gap-8 lg:gap-8 "
       >
         <div
           className={`flex flex-col ${
@@ -82,7 +82,7 @@ function Principles(props) {
           }
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="w-1/3"
+          className="w-full lg:w-1/3 px-12 lg:px-0"
         >
           <CodeSnippetGridItem
             snippet={codeSnippets[principle.id]}

@@ -1,13 +1,12 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Drawer from "../components/Drawer";
 
 function MainLayout() {
   return (
-    <div className="min-h-screen relative bg-white text-gray-900 font-fredoka">
+    <div className="min-h-screen relative bg-white text-gray-900 font-fredoka ">
       {/* Background grids (behind everything) */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-x-hidden">
         <div className="absolute inset-x-0 top-0 h-200 bg-ceramic-grid-dashed background-grid--fade-out" />
         <div className="absolute inset-x-0 bottom-0 h-120 bg-ceramic-grid-inversed background-grid--fade-out-inversed" />
         <div className="absolute -top-32 -right-32 w-125 h-125 bg-primaryPurple/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -17,8 +16,8 @@ function MainLayout() {
       {/* Navbar — outside scrollable area */}
       <Navbar />
       {/* Scrollable content area — NOT flex, NOT the root */}
-      <div className="flex-1 overflow-y-scroll pt-20  relative z-10">
-        <main className="mx-auto w-full max-w-6xl ">
+      <div className="flex-1 overflow-y-scroll pt-20  relative z-10 overflow-x-hidden ">
+        <main className="mx-auto w-full lg:max-w-6xl ">
           <Outlet />
         </main>
 

@@ -34,7 +34,7 @@ function Services(props) {
       initial="hidden"
       animate="visible"
       variants={animationProperties.container}
-      className="flex flex-col items-start lg:px-0 px-12"
+      className="flex flex-col items-start lg:px-0 px-12 "
     >
       <section className=" flex lg:flex-row flex-col items-center w-full mx-auto  ">
         <div className="w-full lg:w-7/12 flex flex-col justify-center text-center lg:text-start my-12 lg:my-0">
@@ -73,8 +73,8 @@ function Services(props) {
         </motion.div>
       </section>
 
-      <section className=" pb-36 mt-12 w-full">
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 w-full ">
+      <section className=" pb-36 mt-12 w-full ">
+        <div className="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full ">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (

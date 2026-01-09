@@ -112,7 +112,7 @@ function Portofolio(props) {
             </a>
           </div>
 
-          <div className="flex items-center gap-x-3">
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-x-3">
             <a
               href={etherbeast.github}
               target="new"
