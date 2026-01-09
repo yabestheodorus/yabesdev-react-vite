@@ -34,10 +34,10 @@ function Services(props) {
       initial="hidden"
       animate="visible"
       variants={animationProperties.container}
-      className="flex flex-col items-start "
+      className="flex flex-col items-start lg:px-0 px-12"
     >
-      <section className=" flex items-center w-full mx-auto ">
-        <div className="flex flex-col justify-center w-7/12">
+      <section className=" flex lg:flex-row flex-col items-center w-full mx-auto  ">
+        <div className="w-full lg:w-7/12 flex flex-col justify-center text-center lg:text-start my-12 lg:my-0">
           <motion.h1
             variants={animationProperties.item}
             className="font-bold text-6xl text-slate-800 mb-2"
@@ -46,7 +46,7 @@ function Services(props) {
           </motion.h1>
           <motion.p
             variants={animationProperties.item}
-            className="mt-4 text-2xl text-slate-600 max-w-2xl relative"
+            className="mt-4 text-2xl text-slate-600 lg:max-w-2xl "
           >
             I am really passionate about building software solutions that will
             solve problems for businesses and individuals. I identify the
@@ -56,31 +56,31 @@ function Services(props) {
           {/* Add amber divider for rhythm & visual closure */}
           <motion.div
             variants={animationProperties.item}
-            className="w-24 h-0.5 bg-amber-500 mt-6 mb-16  rounded-full"
+            className="w-24 h-0.5 bg-amber-500 mt-6 mx-auto lg:mx-0"
           />
         </div>
 
         <motion.div
-          className="w-full md:w-5/12 order-first md:order-last flex justify-center"
+          className="w-full lg:w-5/12 order-first lg:order-last flex justify-center"
           initial={{ opacity: 0, scale: 0.95, x: 100 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ type: "spring", stiffness: 600, damping: 20 }}
         >
           <img
-            className={`relative w-3/4 mx-auto md:w-full h-auto duration-1000 block`}
+            className={`relative w-1/2  mx-auto lg:w-full h-auto duration-1000 block`}
             src="/images/header_service.png"
           />
         </motion.div>
       </section>
 
-      <section className=" pb-36 mt-12 ">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className=" pb-36 mt-12 w-full">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 w-full ">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <div
                 key={index}
-                className="relative group rounded-3xl bg-white/10 backdrop-blur-lg border border-slate-200 p-10
+                className="relative group text-center lg:text-start rounded-3xl bg-white/10 backdrop-blur-lg border border-slate-200 p-10
                            shadow-sm transition
                            hover:shadow-xl hover:border-primaryPurple/40 hover:cursor-pointer"
               >

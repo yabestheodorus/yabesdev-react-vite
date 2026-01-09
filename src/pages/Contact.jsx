@@ -54,10 +54,10 @@ function Contact(props) {
       initial="hidden"
       animate="visible"
       variants={animationProperties.container}
-      className="flex flex-col items-start pb-48 relative"
+      className="flex flex-col items-start lg:px-0 px-12 pb-36"
     >
-      <section className=" flex items-start w-full mx-auto z-30 ">
-        <div className="flex flex-col justify-center w-7/12">
+      <section className=" flex lg:flex-row flex-col items-center w-full mx-auto  ">
+        <div className="w-full lg:w-7/12 flex flex-col justify-center text-center lg:text-start my-12 lg:my-0">
           <motion.h1
             variants={animationProperties.item}
             className="font-bold text-6xl text-slate-800 mb-2 mt-12"
@@ -66,14 +66,14 @@ function Contact(props) {
           </motion.h1>
           <motion.p
             variants={animationProperties.item}
-            className="mt-4 text-2xl text-slate-600 max-w-2xl "
+            className="mt-4 text-2xl text-slate-600 mx-auto max-w-2xl "
           >
             Reach me for collaborations, project inquiries, or just to start a
             conversation. I’m always open to discussing ideas and opportunities.
           </motion.p>
           <motion.div
             variants={animationProperties.item}
-            className="w-24 h-0.5 bg-amber-500 mt-6 mb-16  rounded-full"
+            className="w-24 h-0.5 bg-amber-500 mt-6 mx-auto lg:mx-0"
           />
           {/* ✨ Social Media Table */}
           <motion.div
@@ -124,13 +124,13 @@ function Contact(props) {
         </div>
 
         <motion.div
-          className="w-full md:w-5/12 order-first md:order-last flex justify-center"
+          className="w-full lg:w-5/12 order-first lg:order-last flex justify-center"
           initial={{ opacity: 0, scale: 0.95, x: 100 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ type: "spring", stiffness: 600, damping: 20 }}
         >
           <img
-            className={`relative w-3/4 mx-auto md:w-full block h-auto duration-1000 block`}
+            className={`relative w-1/2  mx-auto lg:w-full h-auto duration-1000 block`}
             src="/images/header_contact.png"
           />
         </motion.div>

@@ -10,6 +10,11 @@
   --font-jakarta: "Plus Jakarta Sans", sans-serif;
   --font-geistmono: "Geist Mono", sans-serif;
 }
+
+html {
+  font-size: clamp(12px, 1.1vw, 16px);
+}
+
  @plugin "daisyui/theme" {
    name: "light";
    --color-primaryPurple: #5B4B8A;

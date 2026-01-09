@@ -19,9 +19,9 @@ import { NavLink } from "react-router-dom";
 function Home(props) {
   return (
     <div className="flex flex-col justify-center ">
-      <section className=" flex items-start w-full mx-auto mt-12">
+      <section className=" flex lg:flex-row flex-col items-center lg:items-start w-full mx-auto mt-12 ">
         <motion.div
-          className="flex flex-col justify-center w-7/12 h-full gap-y-4"
+          className="flex flex-col justify-center items-center lg:items-start w-7/12 h-full gap-y-4"
           initial="hidden"
           animate="visible"
           variants={animationProperties.container}
@@ -54,7 +54,7 @@ function Home(props) {
           </motion.div>
 
           <motion.div variants={animationProperties.item}>
-            <span className="flex items-center gap-x-2 font-jakarta mb-6 text-6xl">
+            <span className="flex flex-col lg:flex-row items-center gap-x-2 font-jakarta mb-6 text-6xl">
               <h1 className="font-extrabold text-slate-800">I’m</h1>{" "}
               <h1 className="font-extrabold text-primaryPurple">Yabes</h1>
               <h1 className="font-extrabold text-slate-800">Theodorus,</h1>
@@ -63,13 +63,13 @@ function Home(props) {
 
           {/* 2. Tagline / role */}
           <motion.div variants={animationProperties.item}>
-            <p className="text-xl font-semibold text-gray-700 -mb-3">
+            <p className="text-xl text-center lg:text-start font-semibold text-gray-700 -mb-3">
               Blockchain & Smart Contract Developer |
             </p>
           </motion.div>
 
           <motion.div variants={animationProperties.item}>
-            <p className="text-xl text-gray-700 mb-6">
+            <p className="text-xl text-center lg:text-start text-gray-700 mb-6">
               Full-Stack Web3 Engineer
             </p>
           </motion.div>
@@ -167,18 +167,18 @@ function Home(props) {
           </motion.div>
         </motion.div>
         <motion.div
-          className="w-full md:w-5/12 order-first md:order-last flex justify-center"
+          className="w-full lg:w-5/12 order-first lg:order-last flex justify-center lg:mb-0 mb-24"
           initial={{ opacity: 0, scale: 0.95, x: 100 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
           transition={{ type: "spring", stiffness: 600, damping: 20 }}
         >
           <img
-            className={`relative w-3/4 mx-auto md:w-full h-auto duration-1000 block`}
+            className={`relative w-1/2  mx-auto lg:w-full h-auto duration-1000 block`}
             src="/images/header.png"
           />
         </motion.div>
       </section>
-      <section className="my-20">
+      <section className="my-20 px-8 lg:px-0">
         <Quote />
       </section>
 

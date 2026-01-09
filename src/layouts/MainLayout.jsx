@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Drawer from "../components/Drawer";
 
 function MainLayout() {
   return (
@@ -15,7 +16,6 @@ function MainLayout() {
 
       {/* Navbar — outside scrollable area */}
       <Navbar />
-
       {/* Scrollable content area — NOT flex, NOT the root */}
       <div className="flex-1 overflow-y-scroll pt-20  relative z-10">
         <main className="mx-auto w-full max-w-6xl ">

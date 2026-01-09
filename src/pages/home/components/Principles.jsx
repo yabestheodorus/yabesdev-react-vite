@@ -31,11 +31,14 @@ function Principles(props) {
   const [selectedSnippet, setSelectedSnippet] = useState(null);
   const renderPrinciples = () => {
     return principles.map((principle, index) => (
-      <div key={index} className="flex items-center gap-x-8">
+      <div
+        key={index}
+        className="flex lg:flex-row flex-col items-center gap-8 lg:gap-8"
+      >
         <div
           className={`flex flex-col ${
-            index % 2 == 0 ? "items-start  " : "items-end order-2 "
-          }  w-2/3 space-y-4`}
+            index % 2 == 0 ? "lg:items-start  " : "lg:items-end lg:order-2 "
+          }  w-2/3 space-y-4 items-center`}
           key={index}
         >
           <motion.div
@@ -54,7 +57,7 @@ function Principles(props) {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <h3 className="text-slate-800 font-semibold text-4xl ">
+            <h3 className="text-slate-800 font-semibold text-4xl text-center lg:text-start">
               {principle.subtitle}
             </h3>
           </motion.div>
@@ -64,8 +67,8 @@ function Principles(props) {
             transition={{ duration: 1, ease: "easeOut" }}
           >
             <p
-              className={`text-slate-400  font-base text-md ${
-                index % 2 == 0 ? "text-left " : "text-right "
+              className={`text-slate-400  font-base text-md text-center ${
+                index % 2 == 0 ? "lg:text-left " : "lg:text-right "
               }`}
             >
               {principle.description}
