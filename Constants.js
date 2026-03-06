@@ -19,6 +19,26 @@ export const portofolios = {
       "ERC20",
     ],
   },
+  zkmotus: {
+     id: "zkmotus-zkproof-commerce",
+    title: "The ZKMotus Commerce",
+    shortDescription:
+      "ZKMotus is a privacy-preserving authenticity system that uses zero-knowledge proofs to verify product ownership and originality without revealing sensitive data. It combines cryptographic commitments, off-chain order management, and on-chain verification to register and prove the authenticity of physical or digital items while keeping merchant secrets and serial numbers private.",
+    image: "https://via.placeholder.com/300",
+    link: "https://zkmotus.yabestheo.dev/",
+    github: "https://github.com/yabestheodorus/zkmotus-coin-commerce",
+    githubFrontend: "https://github.com/yabestheodorus/zkmotus-coin-commerce",
+    hashtags: [
+      "React",
+      "Solidity",
+      "Zero-Knowledge",
+      "Blockchain",
+      "Noir",
+      "TailwindCSS",
+      "Circuit",
+      "Proof",
+    ],
+  }
 };
 
 export const animationProperties = {

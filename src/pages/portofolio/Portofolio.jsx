@@ -19,6 +19,7 @@ function Portofolio(props) {
   ];
 
   const etherbeast = portofolios.etherbeast;
+  const zkmotus = portofolios.zkmotus;
 
   return (
     <motion.div
@@ -141,6 +142,87 @@ function Portofolio(props) {
             </div>
             <div className="grid place-content-center border-t border-base-300 h-auto bg-white">
               <img src="/images/etherbeast.png" />
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      <div className="mb-36"></div>
+
+      <motion.div
+        variants={animationProperties.fade}
+        className="flex flex-col lg:flex-row items-center lg:gap-4 gap-12"
+      >
+        <div className="flex flex-col w-full order-2 lg:order-1 lg:w-7/12 items-start">
+          <h6 className="text-amber-500 text-xl font-semibold">{zkmotus.id}</h6>
+
+          <h4 className="text-3xl text-slate-800 font-semibold mb-2 mt-4">
+            {zkmotus.title}
+          </h4>
+          <h6 className="text-slate-600 text-lg mb-4 ">
+            {zkmotus.shortDescription}
+          </h6>
+
+          <div className="flex flex-wrap gap-x-4 max-w-3/4 space-y-1">
+            {zkmotus.hashtags.map((hashtag, index) => (
+              <div
+                key={index}
+                className="flex items-center text-md text-slate-400"
+              >
+                <HiHashtag size={15} />
+                {hashtag}
+              </div>
+            ))}
+          </div>
+
+          <div className="flex items-center gap-x-3">
+            <NavLink
+              to="/zkmotus"
+              state={{ zkmotus }}
+              className="flex items-center gap-x-3 rounded-lg bg-primaryPurple text-white px-8 py-2 mt-4 hover:cursor-pointer hover:-translate-y-1 duration-300"
+            >
+              See Details
+              <GiPlayButton className="mt-0.5" />
+            </NavLink>
+            <a
+              href={zkmotus.link}
+              target="blank"
+              className="flex items-center gap-x-3 rounded-lg border border-primaryPurple bg-transparent text-primaryPurple px-8 py-2 mt-4 hover:cursor-pointer hover:-translate-y-1 duration-300"
+            >
+              Demo
+              <IoEyeSharp className="mt-0.5" />
+            </a>
+          </div>
+
+          <div className="flex flex-col lg:flex-row items-start lg:items-center gap-x-3">
+            <a
+              href={zkmotus.github}
+              target="new"
+              className="flex items-center gap-x-3 rounded-lg border border-primaryPurple bg-transparent text-primaryPurple px-8 py-2 mt-4 hover:cursor-pointer hover:-translate-y-1 duration-300"
+            >
+              <FaGithub className="mt-0.5" />
+              Smart Contracts on
+              <span className="font-medium -ml-2">Github</span>
+            </a>
+
+            <a
+              href={zkmotus.githubFrontend}
+              target="new2"
+              className="flex items-center gap-x-3 rounded-lg border border-primaryPurple bg-transparent text-primaryPurple px-8 py-2 mt-4 hover:cursor-pointer hover:-translate-y-1 duration-300"
+            >
+              <FaGithub className="mt-0.5" />
+              Frontend on<span className="font-medium -ml-2">Github</span>
+            </a>
+          </div>
+        </div>
+
+        <div className="flex flex-col w-full order-1 lg:order-2 lg:w-5/12 px-6 items-start ">
+          <div className="mockup-browser border-base-300 border w-full bg-slate-200">
+            <div className="mockup-browser-toolbar ">
+              <div className="input ">https://zkmotus.yabestheo.dev</div>
+            </div>
+            <div className="grid place-content-center border-t border-base-300 h-auto bg-white">
+              <img src="/images/zkmotus1.png" />
             </div>
           </div>
         </div>

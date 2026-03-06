@@ -11,6 +11,7 @@ import Services from "./pages/Services";
 import Portofolio from "./pages/portofolio/Portofolio";
 import EtherbeastDetail from "./pages/portofolio/etherbeast/EtherbeastDetail";
 import Credits from "./pages/Credits";
+import ZKMotusDetail from "./pages/portofolio/zkmotus/ZKMotusDetail";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
 
           <Route path="/portofolio" element={<Portofolio />} />
           <Route path="/etherbeast" element={<EtherbeastDetail />} />
+          <Route path="/zkmotus" element={<ZKMotusDetail />} />
 
           <Route path="/services" element={<Services />} />
           <Route path="/experience" element={<Experience />} />
