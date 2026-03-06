@@ -69,8 +69,14 @@ function Home(props) {
           </motion.div>
 
           <motion.div variants={animationProperties.item}>
-            <p className="text-xl text-center lg:text-start text-gray-700 mb-6">
+            <p className="text-xl text-center lg:text-start text-gray-700 -mb-3">
               Full-Stack Web3 Engineer
+            </p>
+          </motion.div>
+
+          <motion.div variants={animationProperties.item}>
+            <p className="text-xl text-center lg:text-start text-gray-700 mb-6">
+              ZK Application Developer
             </p>
           </motion.div>
 
