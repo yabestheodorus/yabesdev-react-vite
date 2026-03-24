@@ -9,11 +9,11 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 async function generatePDF() {
-  console.log("🖨️ Generating resume.pdf from public/resume.html...");
+  console.log("🖨️ Generating resume.pdf from public/resume_fe.html...");
 
   // Resolve path to public/resume.html
-  const htmlPath = resolve(__dirname, "public", "resume.html");
-  const pdfPath = resolve(__dirname, "public", "resume.pdf");
+  const htmlPath = resolve(__dirname, "public", "resume_fe.html");
+  const pdfPath = resolve(__dirname, "public", "resume_fe.pdf");
 
   const browser = await puppeteer.launch({
     headless: true,

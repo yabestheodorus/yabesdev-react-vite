@@ -11,9 +11,9 @@ function Footer() {
             About Me
           </h3>
           <p className="text-gray-600">
-            I build production-ready smart contracts and full-stack DApps with
-            React, Node.js, and Solidity. My focus is on delivering secure,
-            scalable, and user-friendly Web3 solutions.
+            I develop full-stack web applications from frontend to backend,
+            focusing on performance, scalability, and clean, maintainable
+            architecture.
           </p>
         </div>
 

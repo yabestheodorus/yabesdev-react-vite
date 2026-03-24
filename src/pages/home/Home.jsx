@@ -63,20 +63,20 @@ function Home(props) {
 
           {/* 2. Tagline / role */}
           <motion.div variants={animationProperties.item}>
-            <p className="text-xl text-center lg:text-start font-semibold text-gray-700 -mb-3">
-              Blockchain & Smart Contract Developer |
+            <p className="text-2xl text-center lg:text-start font-semibold text-gray-700 -mb-3">
+              Fullstack Web Developer |
             </p>
           </motion.div>
 
           <motion.div variants={animationProperties.item}>
-            <p className="text-xl text-center lg:text-start text-gray-700 -mb-3">
-              Full-Stack Web3 Engineer
+            <p className="text-lg text-center lg:text-start text-gray-700 -mb-3">
+              Blockchain Smart Contract Developer
             </p>
           </motion.div>
 
           <motion.div variants={animationProperties.item}>
-            <p className="text-xl text-center lg:text-start text-gray-700 mb-6">
-              ZK Application Developer
+            <p className="text-lg text-center lg:text-start text-gray-700 mb-6">
+              Zero-Knowledge Application Developer
             </p>
           </motion.div>
 
@@ -90,7 +90,7 @@ function Home(props) {
               </NavLink>
 
               <a
-                href="/resume.pdf"
+                href="/resume_fe.pdf"
                 download="Yabes-Theodorus-Resume.pdf"
                 className="text-slate-600 group flex items-center gap-x-1 px-4 py-2 font-medium hover:text-amber-600 transition"
               >
